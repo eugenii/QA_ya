@@ -35,8 +35,7 @@ class ExtendedCase(Case):
         print(super_attrs)
         for key, value in self.new_attrs.items():
             print(f'{key}: {value}')
-        # print(*self.new_attrs)
-   
+
 
 test = ExtendedCase(
     '1',
