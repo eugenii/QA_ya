@@ -27,14 +27,12 @@ class ExtendedCase(Case):
     ):
         self.precondition = precondition
         self.environment = environment
-        self.new_attrs = {'Предусловие': self.precondition, 'Окружение': self.environment}
         super().__init__(test_case_id, name, step_description, expected_result)
     
     def print_test_case_info(self):
-        super_attrs = [attr for attr in super().__dict__.keys() if attr not in self.new_attrs]
-        print(super_attrs)
-        for key, value in self.new_attrs.items():
-            print(f'{key}: {value}')
+        super().print_test_case_info()
+        print(f'Предусловие: {self.precondition}'
+              f'\nОкружение: {self.environment}')
 
 
 test = ExtendedCase(

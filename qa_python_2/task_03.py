@@ -8,11 +8,8 @@ class PointsForPlace:
     def get_points_for_place(place):
         if place > 100:
             print('Баллы начисляются только первым 100 участникам')
-            return 
         if place < 1:
             print('Спортсмен не может занять нулевое или отрицательное место')
-            return 
-        # self.points = 101 - place
         return 101 - place
 
 
